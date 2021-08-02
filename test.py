@@ -11,16 +11,18 @@
 #     else:
 #         print(pretty[key])
 #         print("\n\n")
-review = "<em>This review may contain spoilers.</em></ <asdf</<dfa<br />d</<D</"
+review = "<em>This review may contain spoilers.</em></ <spoiler</<pargahraph<br />new line</<sigh</"
 spoiler = False
 if "<em>This review may contain spoilers.</em></ <" in review:
     print("spoiler")
     spoiler = True
     review = review[46:]
+print(review)
 review = review.replace("<br />","\n")[:-2]
+print(review)
 review = review.replace("</<","\n")
 if len(review)>1750:
     review = review [:1750] +"..."
 if spoiler:
-    reivew = "||"+review+"||"
+    review = "||"+review+"||"
 print(review)
