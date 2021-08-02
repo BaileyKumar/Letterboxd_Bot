@@ -10,7 +10,7 @@ import time
 #(r.headers)
 
 old_reviews = {}
-url ="https://letterboxd.com/xosamantha/rss/"
+url ="https://letterboxd.com/mlbrulz/rss/"
 d = feedparser.parse(url)
     #d2 = feedparser.parse('https://letterboxd.com/mlbrulz/rss/', modified = r.headers['Date'])
 for key in d:
@@ -44,3 +44,5 @@ for key in d:
 #             else:
 #                 break
 #     time.sleep(15)
+movies= os.path.join(dir,'movies.xlsx')
+df = pd.read_excel(movies)
